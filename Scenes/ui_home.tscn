@@ -7,8 +7,8 @@
 [ext_resource type="Script" path="res://Scripts/petSprite.gd" id="5_0gi7i"]
 [ext_resource type="Texture2D" uid="uid://dy32yvjm1h3ih" path="res://Img/UI/Stamina.png" id="6_mwjm1"]
 [ext_resource type="Texture2D" uid="uid://cx1e4pib47w3x" path="res://Img/UI/Power.png" id="7_ggbsf"]
-[ext_resource type="Script" path="res://Scenes/stam_label.gd" id="8_ggbsf"]
-[ext_resource type="Script" path="res://Scenes/pow_label.gd" id="9_ph3ao"]
+[ext_resource type="Script" path="res://Scripts/stam_label.gd" id="8_ggbsf"]
+[ext_resource type="Script" path="res://Scripts/pow_label.gd" id="9_ph3ao"]
 
 [node name="UIHome" type="Node2D"]
 
@@ -145,6 +145,7 @@ theme_override_styles/normal = ExtResource("4_gwo3k")
 text = "Shop"
 
 [node name="StamLabel" type="Label" parent="ColorRect"]
+layout_mode = 0
 offset_left = 226.0
 offset_top = 514.0
 offset_right = 280.0

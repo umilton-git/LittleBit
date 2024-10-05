@@ -4,11 +4,11 @@
 [ext_resource type="StyleBox" uid="uid://dxc1rhosqgl31" path="res://Styles/textbox_pressed.tres" id="2_u4qm0"]
 [ext_resource type="StyleBox" uid="uid://cfk3cthf276cl" path="res://Styles/textbox_hover.tres" id="3_rc7ud"]
 [ext_resource type="StyleBox" uid="uid://cw7t27okt7475" path="res://Styles/textbox.tres" id="4_3jsnv"]
-[ext_resource type="Script" path="res://Scenes/button_wimble.gd" id="5_3jsnv"]
+[ext_resource type="Script" path="res://Scripts/button_wimble.gd" id="5_3jsnv"]
 [ext_resource type="Texture2D" uid="uid://coa7fwvp2f1eh" path="res://Img/Bits/Wimble.png" id="5_p51g2"]
 [ext_resource type="Script" path="res://Scripts/button_plopple.gd" id="5_u4qm0"]
 [ext_resource type="Texture2D" uid="uid://buaic7v1ep4cd" path="res://Img/Bits/Distro.png" id="6_oj218"]
-[ext_resource type="Script" path="res://Scenes/button_distro.gd" id="6_rc7ud"]
+[ext_resource type="Script" path="res://Scripts/button_distro.gd" id="6_rc7ud"]
 [ext_resource type="Texture2D" uid="uid://b2esag0ri1iuq" path="res://Img/Bits/Plopple.png" id="7_1egf3"]
 
 [node name="UISelect" type="Node2D"]
