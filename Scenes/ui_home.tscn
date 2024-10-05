@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://cylpltiloud4r"]
+[gd_scene load_steps=10 format=3 uid="uid://cylpltiloud4r"]
 
 [ext_resource type="FontFile" uid="uid://kf5x4r6vkl0k" path="res://Fonts/WOBBLES_.ttf" id="1_mwjm1"]
 [ext_resource type="StyleBox" uid="uid://dxc1rhosqgl31" path="res://Styles/textbox_pressed.tres" id="2_ggbsf"]
 [ext_resource type="StyleBox" uid="uid://cfk3cthf276cl" path="res://Styles/textbox_hover.tres" id="3_ph3ao"]
 [ext_resource type="StyleBox" uid="uid://cw7t27okt7475" path="res://Styles/textbox.tres" id="4_gwo3k"]
 [ext_resource type="Script" path="res://Scripts/petSprite.gd" id="5_0gi7i"]
+[ext_resource type="Texture2D" uid="uid://dy32yvjm1h3ih" path="res://Img/UI/Stamina.png" id="6_mwjm1"]
+[ext_resource type="Texture2D" uid="uid://cx1e4pib47w3x" path="res://Img/UI/Power.png" id="7_ggbsf"]
+[ext_resource type="Script" path="res://Scenes/stam_label.gd" id="8_ggbsf"]
+[ext_resource type="Script" path="res://Scenes/pow_label.gd" id="9_ph3ao"]
 
 [node name="UIHome" type="Node2D"]
 
@@ -45,6 +49,16 @@ text = "Fight"
 position = Vector2(-377, -159)
 scale = Vector2(0.25, 0.25)
 script = ExtResource("5_0gi7i")
+
+[node name="Stamina" type="Sprite2D" parent="ColorRect/Button_Fight"]
+position = Vector2(-559.8, 97.2)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("6_mwjm1")
+
+[node name="Power" type="Sprite2D" parent="ColorRect/Button_Fight"]
+position = Vector2(-249, 96)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("7_ggbsf")
 
 [node name="Button_Train" type="Button" parent="ColorRect"]
 layout_mode = 1
@@ -129,3 +143,24 @@ theme_override_styles/pressed = ExtResource("2_ggbsf")
 theme_override_styles/normal_mirrored = ExtResource("4_gwo3k")
 theme_override_styles/normal = ExtResource("4_gwo3k")
 text = "Shop"
+
+[node name="StamLabel" type="Label" parent="ColorRect"]
+offset_left = 226.0
+offset_top = 514.0
+offset_right = 280.0
+offset_bottom = 629.0
+theme_override_fonts/font = ExtResource("1_mwjm1")
+theme_override_font_sizes/font_size = 75
+text = "5"
+script = ExtResource("8_ggbsf")
+
+[node name="PowLabel" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 539.0
+offset_top = 514.0
+offset_right = 593.0
+offset_bottom = 629.0
+theme_override_fonts/font = ExtResource("1_mwjm1")
+theme_override_font_sizes/font_size = 75
+text = "5"
+script = ExtResource("9_ph3ao")
