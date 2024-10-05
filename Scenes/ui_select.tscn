@@ -1,0 +1,139 @@
+[gd_scene load_steps=11 format=3 uid="uid://eaj7jh8q1p1a"]
+
+[ext_resource type="FontFile" uid="uid://kf5x4r6vkl0k" path="res://Fonts/WOBBLES_.ttf" id="1_shmbq"]
+[ext_resource type="StyleBox" uid="uid://dxc1rhosqgl31" path="res://Styles/textbox_pressed.tres" id="2_u4qm0"]
+[ext_resource type="StyleBox" uid="uid://cfk3cthf276cl" path="res://Styles/textbox_hover.tres" id="3_rc7ud"]
+[ext_resource type="StyleBox" uid="uid://cw7t27okt7475" path="res://Styles/textbox.tres" id="4_3jsnv"]
+[ext_resource type="Script" path="res://Scenes/button_wimble.gd" id="5_3jsnv"]
+[ext_resource type="Texture2D" uid="uid://coa7fwvp2f1eh" path="res://Img/Bits/Wimble.png" id="5_p51g2"]
+[ext_resource type="Script" path="res://Scripts/button_plopple.gd" id="5_u4qm0"]
+[ext_resource type="Texture2D" uid="uid://buaic7v1ep4cd" path="res://Img/Bits/Distro.png" id="6_oj218"]
+[ext_resource type="Script" path="res://Scenes/button_distro.gd" id="6_rc7ud"]
+[ext_resource type="Texture2D" uid="uid://b2esag0ri1iuq" path="res://Img/Bits/Plopple.png" id="7_1egf3"]
+
+[node name="UISelect" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 644.0
+color = Color(0.6466, 0.71456, 0.275998, 1)
+
+[node name="Button_Wimble" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -359.5
+offset_top = 132.0
+offset_right = -141.5
+offset_bottom = 217.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.49, 0.49, 0.49, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_shmbq")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover_pressed_mirrored = ExtResource("2_u4qm0")
+theme_override_styles/hover_pressed = ExtResource("2_u4qm0")
+theme_override_styles/hover_mirrored = ExtResource("3_rc7ud")
+theme_override_styles/hover = ExtResource("3_rc7ud")
+theme_override_styles/pressed_mirrored = ExtResource("2_u4qm0")
+theme_override_styles/pressed = ExtResource("2_u4qm0")
+theme_override_styles/normal_mirrored = ExtResource("4_3jsnv")
+theme_override_styles/normal = ExtResource("4_3jsnv")
+text = "Wimble"
+script = ExtResource("5_3jsnv")
+
+[node name="Button_Plopple" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.5
+offset_top = 134.0
+offset_right = 121.5
+offset_bottom = 219.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.49, 0.49, 0.49, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_shmbq")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover_pressed_mirrored = ExtResource("2_u4qm0")
+theme_override_styles/hover_pressed = ExtResource("2_u4qm0")
+theme_override_styles/hover_mirrored = ExtResource("3_rc7ud")
+theme_override_styles/hover = ExtResource("3_rc7ud")
+theme_override_styles/pressed_mirrored = ExtResource("2_u4qm0")
+theme_override_styles/pressed = ExtResource("2_u4qm0")
+theme_override_styles/normal_mirrored = ExtResource("4_3jsnv")
+theme_override_styles/normal = ExtResource("4_3jsnv")
+text = "Plopple"
+script = ExtResource("5_u4qm0")
+
+[node name="Button_Distro" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 158.5
+offset_top = 133.0
+offset_right = 376.5
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.49, 0.49, 0.49, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_shmbq")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover_pressed_mirrored = ExtResource("2_u4qm0")
+theme_override_styles/hover_pressed = ExtResource("2_u4qm0")
+theme_override_styles/hover_mirrored = ExtResource("3_rc7ud")
+theme_override_styles/hover = ExtResource("3_rc7ud")
+theme_override_styles/pressed_mirrored = ExtResource("2_u4qm0")
+theme_override_styles/pressed = ExtResource("2_u4qm0")
+theme_override_styles/normal_mirrored = ExtResource("4_3jsnv")
+theme_override_styles/normal = ExtResource("4_3jsnv")
+text = "Distro"
+script = ExtResource("6_rc7ud")
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -322.5
+offset_top = -311.0
+offset_right = 323.5
+offset_bottom = -189.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_shmbq")
+theme_override_font_sizes/font_size = 80
+text = "Select your bit!"
+
+[node name="Wimble" type="Sprite2D" parent="ColorRect"]
+position = Vector2(324, 263)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("5_p51g2")
+
+[node name="Distro" type="Sprite2D" parent="ColorRect"]
+position = Vector2(844, 289)
+scale = Vector2(0.15, 0.156)
+texture = ExtResource("6_oj218")
+
+[node name="Plopple" type="Sprite2D" parent="ColorRect"]
+position = Vector2(592, 281)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("7_1egf3")

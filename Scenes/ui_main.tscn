@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://vumcxohoibq5"]
+[gd_scene load_steps=10 format=3 uid="uid://vumcxohoibq5"]
 
 [ext_resource type="StyleBox" uid="uid://dxc1rhosqgl31" path="res://Styles/textbox_pressed.tres" id="1_8hydc"]
 [ext_resource type="StyleBox" uid="uid://cw7t27okt7475" path="res://Styles/textbox.tres" id="1_iw6jg"]
 [ext_resource type="FontFile" uid="uid://kf5x4r6vkl0k" path="res://Fonts/WOBBLES_.ttf" id="1_jvxtr"]
 [ext_resource type="StyleBox" uid="uid://cfk3cthf276cl" path="res://Styles/textbox_hover.tres" id="1_k4uto"]
+[ext_resource type="Script" path="res://Scripts/end.gd" id="5_cw5ay"]
 [ext_resource type="Texture2D" uid="uid://coa7fwvp2f1eh" path="res://Img/Bits/Wimble.png" id="5_mcusc"]
+[ext_resource type="Script" path="res://Scripts/start.gd" id="5_wsqr8"]
 [ext_resource type="Texture2D" uid="uid://buaic7v1ep4cd" path="res://Img/Bits/Distro.png" id="6_vwxsp"]
 [ext_resource type="Texture2D" uid="uid://b2esag0ri1iuq" path="res://Img/Bits/Plopple.png" id="7_j0giu"]
 
@@ -15,7 +17,7 @@ offset_right = 1153.0
 offset_bottom = 644.0
 color = Color(0.6466, 0.71456, 0.275998, 1)
 
-[node name="Button" type="Button" parent="ColorRect"]
+[node name="Start" type="Button" parent="ColorRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -42,8 +44,9 @@ theme_override_styles/pressed = ExtResource("1_8hydc")
 theme_override_styles/normal_mirrored = ExtResource("1_iw6jg")
 theme_override_styles/normal = ExtResource("1_iw6jg")
 text = "Start Game"
+script = ExtResource("5_wsqr8")
 
-[node name="Button2" type="Button" parent="ColorRect"]
+[node name="Quit" type="Button" parent="ColorRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -70,8 +73,9 @@ theme_override_styles/pressed = ExtResource("1_8hydc")
 theme_override_styles/normal_mirrored = ExtResource("1_iw6jg")
 theme_override_styles/normal = ExtResource("1_iw6jg")
 text = "Quit"
+script = ExtResource("5_cw5ay")
 
-[node name="Label" type="Label" parent="ColorRect"]
+[node name="Title" type="Label" parent="ColorRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
