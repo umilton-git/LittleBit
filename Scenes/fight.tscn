@@ -1,0 +1,164 @@
+[gd_scene load_steps=14 format=3 uid="uid://cjlpyt3x8d0re"]
+
+[ext_resource type="FontFile" uid="uid://kf5x4r6vkl0k" path="res://Fonts/WOBBLES_.ttf" id="1_b1d61"]
+[ext_resource type="StyleBox" uid="uid://dxc1rhosqgl31" path="res://Styles/textbox_pressed.tres" id="2_iin7n"]
+[ext_resource type="Script" path="res://Scripts/stam_label.gd" id="2_pdb0v"]
+[ext_resource type="StyleBox" uid="uid://cfk3cthf276cl" path="res://Styles/textbox_hover.tres" id="3_bgrs5"]
+[ext_resource type="Script" path="res://Scenes/enem_stam.gd" id="3_wn23j"]
+[ext_resource type="Script" path="res://Scripts/pow_label.gd" id="3_ww01n"]
+[ext_resource type="StyleBox" uid="uid://cw7t27okt7475" path="res://Styles/textbox.tres" id="4_k0v31"]
+[ext_resource type="Texture2D" uid="uid://dy32yvjm1h3ih" path="res://Img/UI/Stamina.png" id="4_kla5h"]
+[ext_resource type="Script" path="res://Scenes/enem_pow.gd" id="4_ww01n"]
+[ext_resource type="Script" path="res://Scenes/forfeit.gd" id="5_624cx"]
+[ext_resource type="Texture2D" uid="uid://cx1e4pib47w3x" path="res://Img/UI/Power.png" id="5_b1d61"]
+[ext_resource type="Texture2D" uid="uid://ttwnm4hy4xyh" path="res://Img/Bits/Vilepoochie.png" id="7_624cx"]
+[ext_resource type="Script" path="res://Scenes/battle.gd" id="12_kla5h"]
+
+[node name="UIMain" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 644.0
+color = Color(0.6466, 0.71456, 0.275998, 1)
+
+[node name="StamLabel" type="Label" parent="ColorRect"]
+offset_left = 79.0
+offset_top = 229.0
+offset_right = 133.0
+offset_bottom = 344.0
+theme_override_fonts/font = ExtResource("1_b1d61")
+theme_override_font_sizes/font_size = 75
+text = "5"
+script = ExtResource("2_pdb0v")
+
+[node name="Stamina2" type="Sprite2D" parent="ColorRect"]
+position = Vector2(832, 286)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("4_kla5h")
+
+[node name="Stamina" type="Sprite2D" parent="ColorRect"]
+position = Vector2(41, 286)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("4_kla5h")
+
+[node name="Power" type="Sprite2D" parent="ColorRect"]
+position = Vector2(43, 400)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("5_b1d61")
+
+[node name="Power2" type="Sprite2D" parent="ColorRect"]
+position = Vector2(881, 400)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("5_b1d61")
+
+[node name="EnemStam" type="Label" parent="ColorRect"]
+offset_left = 866.0
+offset_top = 229.0
+offset_right = 920.0
+offset_bottom = 344.0
+theme_override_fonts/font = ExtResource("1_b1d61")
+theme_override_font_sizes/font_size = 75
+text = "5"
+script = ExtResource("3_wn23j")
+
+[node name="PowLabel" type="Label" parent="ColorRect"]
+offset_left = 83.0
+offset_top = 340.0
+offset_right = 137.0
+offset_bottom = 455.0
+theme_override_fonts/font = ExtResource("1_b1d61")
+theme_override_font_sizes/font_size = 75
+text = "5"
+script = ExtResource("3_ww01n")
+
+[node name="EnemPow" type="Label" parent="ColorRect"]
+offset_left = 921.0
+offset_top = 340.0
+offset_right = 975.0
+offset_bottom = 455.0
+theme_override_fonts/font = ExtResource("1_b1d61")
+theme_override_font_sizes/font_size = 75
+text = "5"
+script = ExtResource("4_ww01n")
+
+[node name="Forfeit" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 331.5
+offset_top = 206.0
+offset_right = 549.5
+offset_bottom = 291.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.49, 0.49, 0.49, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_b1d61")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover_pressed_mirrored = ExtResource("2_iin7n")
+theme_override_styles/hover_pressed = ExtResource("2_iin7n")
+theme_override_styles/hover_mirrored = ExtResource("3_bgrs5")
+theme_override_styles/hover = ExtResource("3_bgrs5")
+theme_override_styles/pressed_mirrored = ExtResource("2_iin7n")
+theme_override_styles/pressed = ExtResource("2_iin7n")
+theme_override_styles/normal_mirrored = ExtResource("4_k0v31")
+theme_override_styles/normal = ExtResource("4_k0v31")
+text = "Forfeit"
+script = ExtResource("5_624cx")
+
+[node name="Battlebutton" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.5
+offset_top = 239.0
+offset_right = 141.5
+offset_bottom = 288.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.49, 0.49, 0.49, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_b1d61")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover_pressed_mirrored = ExtResource("2_iin7n")
+theme_override_styles/hover_pressed = ExtResource("2_iin7n")
+theme_override_styles/hover_mirrored = ExtResource("3_bgrs5")
+theme_override_styles/hover = ExtResource("3_bgrs5")
+theme_override_styles/pressed_mirrored = ExtResource("2_iin7n")
+theme_override_styles/pressed = ExtResource("2_iin7n")
+theme_override_styles/normal_mirrored = ExtResource("4_k0v31")
+theme_override_styles/normal = ExtResource("4_k0v31")
+text = "FIGHT!"
+script = ExtResource("12_kla5h")
+
+[node name="Vilepoochie" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -312.5
+offset_top = -314.0
+offset_right = 333.5
+offset_bottom = -192.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_b1d61")
+theme_override_font_sizes/font_size = 80
+text = "VILEPOOCHIE!"
+horizontal_alignment = 1
+
+[node name="Vilepoochie" type="Sprite2D" parent="."]
+position = Vector2(623, 316)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_624cx")

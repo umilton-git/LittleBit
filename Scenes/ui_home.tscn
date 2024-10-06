@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cylpltiloud4r"]
+[gd_scene load_steps=18 format=3 uid="uid://cylpltiloud4r"]
 
 [ext_resource type="FontFile" uid="uid://kf5x4r6vkl0k" path="res://Fonts/WOBBLES_.ttf" id="1_mwjm1"]
 [ext_resource type="StyleBox" uid="uid://dxc1rhosqgl31" path="res://Styles/textbox_pressed.tres" id="2_ggbsf"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cx1e4pib47w3x" path="res://Img/UI/Power.png" id="7_ggbsf"]
 [ext_resource type="Script" path="res://Scripts/stam_label.gd" id="8_ggbsf"]
 [ext_resource type="Script" path="res://Scripts/button_rest.gd" id="8_gwo3k"]
+[ext_resource type="Script" path="res://Scenes/button_fight.gd" id="8_m06mh"]
 [ext_resource type="Script" path="res://Scripts/button_shop.gd" id="9_6gvkx"]
 [ext_resource type="Script" path="res://Scripts/button_work.gd" id="9_6hnka"]
 [ext_resource type="Script" path="res://Scripts/button_train.gd" id="9_gd16w"]
@@ -66,6 +67,7 @@ theme_override_styles/pressed = ExtResource("2_ggbsf")
 theme_override_styles/normal_mirrored = ExtResource("4_gwo3k")
 theme_override_styles/normal = ExtResource("4_gwo3k")
 text = "Fight"
+script = ExtResource("8_m06mh")
 
 [node name="Button_Rest" type="Button" parent="ColorRect"]
 layout_mode = 1
