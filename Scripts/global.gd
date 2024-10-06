@@ -27,7 +27,7 @@ var MSimPrice = 300
 var MSimInc = 1
 var enemstammax = 60
 var enemstamcurr = 60
-var enempow = 60
+var enempow = 25
 
 func update_label(label: Label):
 	label.text = str(Global.currStam) + "\\" + str(Global.maxStam)
@@ -36,7 +36,7 @@ func update_timersecs():
 	timersecs = maxStam * 2
 	
 func lose():
-	Global.enemstamcurr = 60
+	Global.enemstamcurr = Global.enemstammax
 	Global.currStam = 1
 	if Global.Day < 10:
 		Global.currTod = Global.TOD.Night

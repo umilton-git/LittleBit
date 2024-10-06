@@ -150,6 +150,16 @@ theme_override_font_sizes/font_size = 36
 text = "$"
 script = ExtResource("8_1vw06")
 
+[node name="DoshLabel2" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 353.0
+offset_top = 169.0
+offset_right = 829.0
+offset_bottom = 225.0
+theme_override_fonts/font = ExtResource("1_ki1yx")
+theme_override_font_sizes/font_size = 36
+text = "uses full stamina!"
+
 [node name="PBagPrice" type="Label" parent="ColorRect"]
 layout_mode = 0
 offset_left = 176.0
