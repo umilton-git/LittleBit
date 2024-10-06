@@ -10,12 +10,15 @@ func _on_button_pressed():
 		Global.TOD.Day:
 			Global.currTod = Global.TOD.Evening
 			if Global.currStam < Global.maxStam:
-				Global.currStam += 1
+				Global.currStam += round(Global.maxStam * 0.33)
 		Global.TOD.Evening:
 			Global.currTod = Global.TOD.Night
 			if Global.currStam < Global.maxStam:
-				Global.currStam += 1
+				Global.currStam += round(Global.maxStam * 0.33)
 		Global.TOD.Night:
+			if Global.Day == 10:
+				Global.Day = 0
+				get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
 			Global.currTod = Global.TOD.Day
 			if Global.currStam < Global.maxStam:
 				Global.currStam = Global.maxStam

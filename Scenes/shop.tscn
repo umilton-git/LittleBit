@@ -1,0 +1,233 @@
+[gd_scene load_steps=15 format=3 uid="uid://dqfswvh682vx0"]
+
+[ext_resource type="FontFile" uid="uid://kf5x4r6vkl0k" path="res://Fonts/WOBBLES_.ttf" id="1_k6jq0"]
+[ext_resource type="StyleBox" uid="uid://dxc1rhosqgl31" path="res://Styles/textbox_pressed.tres" id="2_3ps1r"]
+[ext_resource type="StyleBox" uid="uid://cfk3cthf276cl" path="res://Styles/textbox_hover.tres" id="3_ymrm4"]
+[ext_resource type="StyleBox" uid="uid://cw7t27okt7475" path="res://Styles/textbox.tres" id="4_s8dlv"]
+[ext_resource type="Script" path="res://Scripts/back.gd" id="5_3ps1r"]
+[ext_resource type="Script" path="res://Scripts/dosh_label.gd" id="6_3ps1r"]
+[ext_resource type="Script" path="res://Scripts/buy_skewer.gd" id="6_ow1eo"]
+[ext_resource type="Script" path="res://Scripts/buy_powder.gd" id="7_k6pkm"]
+[ext_resource type="Texture2D" uid="uid://bjvdqgh5gjeut" path="res://Img/UI/Stamina_Skewer.png" id="7_s8dlv"]
+[ext_resource type="Script" path="res://Scripts/skewer_price.gd" id="7_tyrku"]
+[ext_resource type="Script" path="res://Scripts/powder_price.gd" id="8_5xp22"]
+[ext_resource type="Texture2D" uid="uid://cbsp667ydmx04" path="res://Img/UI/Power_Powder.png" id="8_tyrku"]
+[ext_resource type="Script" path="res://Scripts/skewer_inc.gd" id="10_1cyt5"]
+[ext_resource type="Script" path="res://Scripts/powder_inc.gd" id="10_1sjcd"]
+
+[node name="UIMain" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 644.0
+color = Color(0.6466, 0.71456, 0.275998, 1)
+
+[node name="Back" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 295.5
+offset_top = 195.0
+offset_right = 513.5
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.49, 0.49, 0.49, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_k6jq0")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover_pressed_mirrored = ExtResource("2_3ps1r")
+theme_override_styles/hover_pressed = ExtResource("2_3ps1r")
+theme_override_styles/hover_mirrored = ExtResource("3_ymrm4")
+theme_override_styles/hover = ExtResource("3_ymrm4")
+theme_override_styles/pressed_mirrored = ExtResource("2_3ps1r")
+theme_override_styles/pressed = ExtResource("2_3ps1r")
+theme_override_styles/normal_mirrored = ExtResource("4_s8dlv")
+theme_override_styles/normal = ExtResource("4_s8dlv")
+text = "Back"
+script = ExtResource("5_3ps1r")
+
+[node name="Buy_Skewer" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -323.5
+offset_top = 231.0
+offset_right = -105.5
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.49, 0.49, 0.49, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_k6jq0")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover_pressed_mirrored = ExtResource("2_3ps1r")
+theme_override_styles/hover_pressed = ExtResource("2_3ps1r")
+theme_override_styles/hover_mirrored = ExtResource("3_ymrm4")
+theme_override_styles/hover = ExtResource("3_ymrm4")
+theme_override_styles/pressed_mirrored = ExtResource("2_3ps1r")
+theme_override_styles/pressed = ExtResource("2_3ps1r")
+theme_override_styles/normal_mirrored = ExtResource("4_s8dlv")
+theme_override_styles/normal = ExtResource("4_s8dlv")
+text = "Buy"
+script = ExtResource("6_ow1eo")
+
+[node name="Buy_Powder" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 45.5
+offset_top = 230.0
+offset_right = 263.5
+offset_bottom = 279.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.49, 0.49, 0.49, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_k6jq0")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover_pressed_mirrored = ExtResource("2_3ps1r")
+theme_override_styles/hover_pressed = ExtResource("2_3ps1r")
+theme_override_styles/hover_mirrored = ExtResource("3_ymrm4")
+theme_override_styles/hover = ExtResource("3_ymrm4")
+theme_override_styles/pressed_mirrored = ExtResource("2_3ps1r")
+theme_override_styles/pressed = ExtResource("2_3ps1r")
+theme_override_styles/normal_mirrored = ExtResource("4_s8dlv")
+theme_override_styles/normal = ExtResource("4_s8dlv")
+text = "Buy"
+script = ExtResource("7_k6pkm")
+
+[node name="DoshLabel" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 13.0
+offset_right = 238.0
+offset_bottom = 69.0
+theme_override_fonts/font = ExtResource("1_k6jq0")
+theme_override_font_sizes/font_size = 36
+text = "$"
+script = ExtResource("6_3ps1r")
+
+[node name="SkewerPrice" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 253.0
+offset_top = 487.0
+offset_right = 465.0
+offset_bottom = 543.0
+theme_override_fonts/font = ExtResource("1_k6jq0")
+theme_override_font_sizes/font_size = 36
+text = "$"
+script = ExtResource("7_tyrku")
+
+[node name="SkewerInc" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 167.0
+offset_right = 548.0
+offset_bottom = 223.0
+theme_override_fonts/font = ExtResource("1_k6jq0")
+theme_override_font_sizes/font_size = 36
+text = "$"
+script = ExtResource("10_1cyt5")
+
+[node name="PowderInc" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 806.0
+offset_top = 162.0
+offset_right = 1018.0
+offset_bottom = 218.0
+theme_override_fonts/font = ExtResource("1_k6jq0")
+theme_override_font_sizes/font_size = 36
+text = "$"
+script = ExtResource("10_1sjcd")
+
+[node name="PowderPrice" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 618.0
+offset_top = 484.0
+offset_right = 830.0
+offset_bottom = 540.0
+theme_override_fonts/font = ExtResource("1_k6jq0")
+theme_override_font_sizes/font_size = 36
+text = "$"
+script = ExtResource("8_5xp22")
+
+[node name="Shop" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -312.5
+offset_top = -314.0
+offset_right = 333.5
+offset_bottom = -192.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_k6jq0")
+theme_override_font_sizes/font_size = 80
+text = "Shop"
+horizontal_alignment = 1
+
+[node name="SkewerLabel" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -380.5
+offset_top = 127.0
+offset_right = -49.5
+offset_bottom = 161.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_k6jq0")
+theme_override_font_sizes/font_size = 20
+text = "Stamina Skewer"
+horizontal_alignment = 1
+
+[node name="PowderLabel" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.5
+offset_top = 126.0
+offset_right = 318.5
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_k6jq0")
+theme_override_font_sizes/font_size = 20
+text = "Power Powder
+"
+horizontal_alignment = 1
+
+[node name="StaminaSkewer" type="Sprite2D" parent="ColorRect"]
+position = Vector2(324, 311)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("7_s8dlv")
+
+[node name="PowerPowder" type="Sprite2D" parent="ColorRect"]
+position = Vector2(725, 302)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("8_tyrku")

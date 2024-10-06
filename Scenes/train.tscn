@@ -1,0 +1,293 @@
+[gd_scene load_steps=16 format=3 uid="uid://bjjrrkhjxd0t7"]
+
+[ext_resource type="FontFile" uid="uid://kf5x4r6vkl0k" path="res://Fonts/WOBBLES_.ttf" id="1_ki1yx"]
+[ext_resource type="StyleBox" uid="uid://dxc1rhosqgl31" path="res://Styles/textbox_pressed.tres" id="2_qi5j6"]
+[ext_resource type="StyleBox" uid="uid://cfk3cthf276cl" path="res://Styles/textbox_hover.tres" id="3_u3u2q"]
+[ext_resource type="StyleBox" uid="uid://cw7t27okt7475" path="res://Styles/textbox.tres" id="4_40qti"]
+[ext_resource type="Script" path="res://Scripts/back.gd" id="5_2egfw"]
+[ext_resource type="Script" path="res://Scripts/buy_p_bag.gd" id="6_qi5j6"]
+[ext_resource type="Script" path="res://Scripts/buy_m_sim.gd" id="7_qi5j6"]
+[ext_resource type="Script" path="res://Scripts/dosh_label.gd" id="8_1vw06"]
+[ext_resource type="Script" path="res://Scripts/buy_t_mill.gd" id="8_qi5j6"]
+[ext_resource type="Script" path="res://Scripts/p_bag_price.gd" id="9_88jks"]
+[ext_resource type="Script" path="res://Scripts/p_bag_inc.gd" id="10_88jks"]
+[ext_resource type="Script" path="res://Scripts/t_mill_inc.gd" id="11_ki1yx"]
+[ext_resource type="Script" path="res://Scripts/t_mill_price.gd" id="12_88jks"]
+[ext_resource type="Script" path="res://Scripts/m_sim_inc.gd" id="12_ki1yx"]
+[ext_resource type="Script" path="res://Scripts/m_sim_price.gd" id="13_88jks"]
+
+[node name="UIMain" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 644.0
+color = Color(0.6466, 0.71456, 0.275998, 1)
+
+[node name="Back" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 295.5
+offset_top = 195.0
+offset_right = 513.5
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.49, 0.49, 0.49, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_ki1yx")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover_pressed_mirrored = ExtResource("2_qi5j6")
+theme_override_styles/hover_pressed = ExtResource("2_qi5j6")
+theme_override_styles/hover_mirrored = ExtResource("3_u3u2q")
+theme_override_styles/hover = ExtResource("3_u3u2q")
+theme_override_styles/pressed_mirrored = ExtResource("2_qi5j6")
+theme_override_styles/pressed = ExtResource("2_qi5j6")
+theme_override_styles/normal_mirrored = ExtResource("4_40qti")
+theme_override_styles/normal = ExtResource("4_40qti")
+text = "Back"
+script = ExtResource("5_2egfw")
+
+[node name="Buy_PBag" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -396.5
+offset_top = 60.0
+offset_right = -178.5
+offset_bottom = 109.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.49, 0.49, 0.49, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_ki1yx")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover_pressed_mirrored = ExtResource("2_qi5j6")
+theme_override_styles/hover_pressed = ExtResource("2_qi5j6")
+theme_override_styles/hover_mirrored = ExtResource("3_u3u2q")
+theme_override_styles/hover = ExtResource("3_u3u2q")
+theme_override_styles/pressed_mirrored = ExtResource("2_qi5j6")
+theme_override_styles/pressed = ExtResource("2_qi5j6")
+theme_override_styles/normal_mirrored = ExtResource("4_40qti")
+theme_override_styles/normal = ExtResource("4_40qti")
+text = "Buy"
+script = ExtResource("6_qi5j6")
+
+[node name="Buy_MSim" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 179.5
+offset_top = 60.0
+offset_right = 397.5
+offset_bottom = 109.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.49, 0.49, 0.49, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_ki1yx")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover_pressed_mirrored = ExtResource("2_qi5j6")
+theme_override_styles/hover_pressed = ExtResource("2_qi5j6")
+theme_override_styles/hover_mirrored = ExtResource("3_u3u2q")
+theme_override_styles/hover = ExtResource("3_u3u2q")
+theme_override_styles/pressed_mirrored = ExtResource("2_qi5j6")
+theme_override_styles/pressed = ExtResource("2_qi5j6")
+theme_override_styles/normal_mirrored = ExtResource("4_40qti")
+theme_override_styles/normal = ExtResource("4_40qti")
+text = "Buy"
+script = ExtResource("7_qi5j6")
+
+[node name="Buy_TMill" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -117.5
+offset_top = 62.0
+offset_right = 100.5
+offset_bottom = 111.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.49, 0.49, 0.49, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_ki1yx")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover_pressed_mirrored = ExtResource("2_qi5j6")
+theme_override_styles/hover_pressed = ExtResource("2_qi5j6")
+theme_override_styles/hover_mirrored = ExtResource("3_u3u2q")
+theme_override_styles/hover = ExtResource("3_u3u2q")
+theme_override_styles/pressed_mirrored = ExtResource("2_qi5j6")
+theme_override_styles/pressed = ExtResource("2_qi5j6")
+theme_override_styles/normal_mirrored = ExtResource("4_40qti")
+theme_override_styles/normal = ExtResource("4_40qti")
+text = "Buy"
+script = ExtResource("8_qi5j6")
+
+[node name="DoshLabel" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 13.0
+offset_right = 238.0
+offset_bottom = 69.0
+theme_override_fonts/font = ExtResource("1_ki1yx")
+theme_override_font_sizes/font_size = 36
+text = "$"
+script = ExtResource("8_1vw06")
+
+[node name="PBagPrice" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 450.0
+offset_right = 388.0
+offset_bottom = 506.0
+theme_override_fonts/font = ExtResource("1_ki1yx")
+theme_override_font_sizes/font_size = 36
+text = "$"
+script = ExtResource("9_88jks")
+
+[node name="PBagInc" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 310.0
+offset_right = 394.0
+offset_bottom = 366.0
+theme_override_fonts/font = ExtResource("1_ki1yx")
+theme_override_font_sizes/font_size = 36
+text = "$"
+script = ExtResource("10_88jks")
+
+[node name="TMillInc" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 462.0
+offset_top = 309.0
+offset_right = 674.0
+offset_bottom = 365.0
+theme_override_fonts/font = ExtResource("1_ki1yx")
+theme_override_font_sizes/font_size = 36
+text = "$"
+script = ExtResource("11_ki1yx")
+
+[node name="MSimInc" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 767.0
+offset_top = 309.0
+offset_right = 979.0
+offset_bottom = 365.0
+theme_override_fonts/font = ExtResource("1_ki1yx")
+theme_override_font_sizes/font_size = 36
+text = "$"
+script = ExtResource("12_ki1yx")
+
+[node name="TMillPrice" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 446.0
+offset_right = 672.0
+offset_bottom = 502.0
+theme_override_fonts/font = ExtResource("1_ki1yx")
+theme_override_font_sizes/font_size = 36
+text = "$"
+script = ExtResource("12_88jks")
+
+[node name="MSimPrice" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 762.0
+offset_top = 446.0
+offset_right = 974.0
+offset_bottom = 502.0
+theme_override_fonts/font = ExtResource("1_ki1yx")
+theme_override_font_sizes/font_size = 36
+text = "$"
+script = ExtResource("13_88jks")
+
+[node name="Shop" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -312.5
+offset_top = -314.0
+offset_right = 333.5
+offset_bottom = -192.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ki1yx")
+theme_override_font_sizes/font_size = 80
+text = "TRAINING"
+horizontal_alignment = 1
+
+[node name="PBagLabel" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -455.5
+offset_top = -49.0
+offset_right = -124.5
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ki1yx")
+theme_override_font_sizes/font_size = 20
+text = "punching bag"
+horizontal_alignment = 1
+
+[node name="TMilllabel" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -188.5
+offset_top = -48.0
+offset_right = 142.5
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ki1yx")
+theme_override_font_sizes/font_size = 20
+text = "Treadmill"
+horizontal_alignment = 1
+
+[node name="MSimLabel" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 129.5
+offset_top = -49.0
+offset_right = 460.5
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ki1yx")
+theme_override_font_sizes/font_size = 20
+text = "Mining Simulator"
+horizontal_alignment = 1
