@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cylpltiloud4r"]
+[gd_scene load_steps=14 format=3 uid="uid://cylpltiloud4r"]
 
 [ext_resource type="FontFile" uid="uid://kf5x4r6vkl0k" path="res://Fonts/WOBBLES_.ttf" id="1_mwjm1"]
 [ext_resource type="StyleBox" uid="uid://dxc1rhosqgl31" path="res://Styles/textbox_pressed.tres" id="2_ggbsf"]
@@ -8,7 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://dy32yvjm1h3ih" path="res://Img/UI/Stamina.png" id="6_mwjm1"]
 [ext_resource type="Texture2D" uid="uid://cx1e4pib47w3x" path="res://Img/UI/Power.png" id="7_ggbsf"]
 [ext_resource type="Script" path="res://Scripts/stam_label.gd" id="8_ggbsf"]
+[ext_resource type="Script" path="res://Scripts/button_rest.gd" id="8_gwo3k"]
 [ext_resource type="Script" path="res://Scripts/pow_label.gd" id="9_ph3ao"]
+[ext_resource type="Script" path="res://Scripts/day_label.gd" id="9_qpagk"]
+[ext_resource type="Script" path="res://Scripts/tod_label.gd" id="10_coge5"]
+[ext_resource type="Script" path="res://Scripts/dosh_label.gd" id="11_3yb52"]
 
 [node name="UIHome" type="Node2D"]
 
@@ -17,6 +21,21 @@ offset_right = 1153.0
 offset_bottom = 644.0
 color = Color(0.6466, 0.71456, 0.275998, 1)
 
+[node name="Pet" type="Sprite2D" parent="ColorRect"]
+position = Vector2(421, 303)
+scale = Vector2(0.27, 0.27)
+script = ExtResource("5_0gi7i")
+
+[node name="Stamina" type="Sprite2D" parent="ColorRect"]
+position = Vector2(169.2, 559.2)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("6_mwjm1")
+
+[node name="Power" type="Sprite2D" parent="ColorRect"]
+position = Vector2(558, 558)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("7_ggbsf")
+
 [node name="Button_Fight" type="Button" parent="ColorRect"]
 layout_mode = 1
 anchors_preset = 8
@@ -24,10 +43,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 152.5
-offset_top = 140.0
-offset_right = 370.5
-offset_bottom = 225.0
+offset_left = 288.5
+offset_top = 189.0
+offset_right = 506.5
+offset_bottom = 274.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -45,20 +64,34 @@ theme_override_styles/normal_mirrored = ExtResource("4_gwo3k")
 theme_override_styles/normal = ExtResource("4_gwo3k")
 text = "Fight"
 
-[node name="Pet" type="Sprite2D" parent="ColorRect/Button_Fight"]
-position = Vector2(-377, -159)
-scale = Vector2(0.25, 0.25)
-script = ExtResource("5_0gi7i")
-
-[node name="Stamina" type="Sprite2D" parent="ColorRect/Button_Fight"]
-position = Vector2(-559.8, 97.2)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("6_mwjm1")
-
-[node name="Power" type="Sprite2D" parent="ColorRect/Button_Fight"]
-position = Vector2(-249, 96)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("7_ggbsf")
+[node name="Button_Rest" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 290.5
+offset_top = 73.0
+offset_right = 508.5
+offset_bottom = 158.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.49, 0.49, 0.49, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_mwjm1")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover_pressed_mirrored = ExtResource("2_ggbsf")
+theme_override_styles/hover_pressed = ExtResource("2_ggbsf")
+theme_override_styles/hover_mirrored = ExtResource("3_ph3ao")
+theme_override_styles/hover = ExtResource("3_ph3ao")
+theme_override_styles/pressed_mirrored = ExtResource("2_ggbsf")
+theme_override_styles/pressed = ExtResource("2_ggbsf")
+theme_override_styles/normal_mirrored = ExtResource("4_gwo3k")
+theme_override_styles/normal = ExtResource("4_gwo3k")
+text = "Rest"
+script = ExtResource("8_gwo3k")
 
 [node name="Button_Train" type="Button" parent="ColorRect"]
 layout_mode = 1
@@ -67,10 +100,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 152.5
-offset_top = 17.0
-offset_right = 370.5
-offset_bottom = 102.0
+offset_left = 290.5
+offset_top = -46.0
+offset_right = 508.5
+offset_bottom = 39.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -95,10 +128,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 153.5
-offset_top = -109.0
-offset_right = 371.5
-offset_bottom = -24.0
+offset_left = 291.5
+offset_top = -164.0
+offset_right = 509.5
+offset_bottom = -79.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -123,10 +156,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 153.5
-offset_top = -230.0
-offset_right = 371.5
-offset_bottom = -145.0
+offset_left = 291.5
+offset_top = -285.0
+offset_right = 509.5
+offset_bottom = -200.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -144,6 +177,39 @@ theme_override_styles/normal_mirrored = ExtResource("4_gwo3k")
 theme_override_styles/normal = ExtResource("4_gwo3k")
 text = "Shop"
 
+[node name="DayLabel" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 16.0
+offset_right = 171.0
+offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("1_mwjm1")
+theme_override_font_sizes/font_size = 36
+text = "Day:"
+script = ExtResource("9_qpagk")
+
+[node name="TODLabel" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 605.0
+offset_top = 16.0
+offset_right = 714.0
+offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("1_mwjm1")
+theme_override_font_sizes/font_size = 36
+text = "Morning"
+script = ExtResource("10_coge5")
+
+[node name="DoshLabel" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 605.0
+offset_top = 71.0
+offset_right = 817.0
+offset_bottom = 127.0
+theme_override_fonts/font = ExtResource("1_mwjm1")
+theme_override_font_sizes/font_size = 36
+text = "$"
+script = ExtResource("11_3yb52")
+
 [node name="StamLabel" type="Label" parent="ColorRect"]
 layout_mode = 0
 offset_left = 226.0
@@ -157,10 +223,10 @@ script = ExtResource("8_ggbsf")
 
 [node name="PowLabel" type="Label" parent="ColorRect"]
 layout_mode = 0
-offset_left = 539.0
-offset_top = 514.0
-offset_right = 593.0
-offset_bottom = 629.0
+offset_left = 611.0
+offset_top = 516.0
+offset_right = 665.0
+offset_bottom = 631.0
 theme_override_fonts/font = ExtResource("1_mwjm1")
 theme_override_font_sizes/font_size = 75
 text = "5"

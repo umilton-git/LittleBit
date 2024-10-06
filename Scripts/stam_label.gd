@@ -1,7 +1,6 @@
 extends Label
 
 func _ready():
-	update_label()
+	Global.update_label(self)
 
-func update_label():
-	text = str(Global.currStam) + "\\" + str(Global.maxStam)
+	
